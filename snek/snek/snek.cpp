@@ -15,7 +15,7 @@ bool gameOver = false;
 const int width = 20;
 const int height = 20;
 int x, y;				//snake position
-int tailX[100], tailY[100];	//tail
+int tailX[400], tailY[400];	//tail
 int nTail = 0;				//size of the tail
 int fruitX, fruitY;		//fruit position
 int score;				//game score
@@ -146,8 +146,11 @@ void logic() {
 	}
 	if (x == fruitX && y == fruitY) {	//if eat fruit
 		score += 10;
-		fruitX = rand() % width;
-		fruitY = rand() % height;
+		do
+		{
+			fruitX = rand() % width;
+			fruitY = rand() % height;
+		} while (fruitX == x || fruitY == y)
 		nTail++;
 	}
 	if (gameOver) {
