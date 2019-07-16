@@ -1,0 +1,6 @@
+New features:
+-The console will ask you if you want to restart the game at GAME OVER
+-You can actually win now!
+Bug fixes:
+-The fruit should no longer spawn inside the snake 
+-Game should no longer crash when the snake size is over 100
